@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050a14">
+<title>Identidade Secreta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+<section id="menu" class="screen">
+  <h1>Identidade<span>//</span>Secreta</h1>
+  <p class="sub">Descubra o personagem secreto do oponente.<br>PC, celular e tablet, até entre aparelhos diferentes.</p>
+  <button class="big" id="bOnline">Modo Online</button>
+  <button class="big alt" id="bLocal">Modo Local</button>
+  <button class="link" id="bHelp">Como jogar</button>
+</section>
+
+<section id="online" class="screen hidden">
+  <h2>Modo Online</h2>
+  <button class="big" id="bCreate">Criar sala</button>
+  <div class="row"><input id="codeIn" maxlength="4" placeholder="CÓDIGO" autocomplete="off" autocapitalize="characters"><button class="big alt" id="bJoin">Entrar na sala</button></div>
+  <div id="onMsg"></div>
+  <button class="big ghost hidden" id="bCopy">Copiar link da sala</button>
+  <button class="link" id="bBack">Voltar</button>
+</section>
+
+<section id="game" class="hidden">
+  <header>
+    <button id="bMenu" class="menuBtn">MENU</button>
+    <div id="pill"></div>
+    <div id="left" title="Candidatos restantes"></div>
+    <span id="timer">00:00</span>
+    <button id="bAuto" class="menuBtn on" title="Eliminar automaticamente após cada resposta">AUTO</button>
+    <button id="bSnd" class="menuBtn">🔊</button>
+  </header>
+  <nav id="tabs"></nav>
+  <div id="qpanel"></div>
+  <main><div id="board"></div></main>
+  <footer>
+    <div id="secret"></div>
+    <div id="log"></div>
+    <button id="guessBtn">Já sabe quem é?</button>
+  </footer>
+</section>
+
+<div id="toast"></div>
+<div id="dlg" class="hidden"><div class="panel"><div id="dTxt"></div><div id="dBtns"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
